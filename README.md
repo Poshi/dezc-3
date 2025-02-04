@@ -19,3 +19,12 @@ Also, there are a couple of questions that are pure theory. Here they are:
     In other situations, the speedup and cost reduction will be negligible.
 
     Reference: [Introduction to clustered tables](https://cloud.google.com/bigquery/docs/clustered-tables?form=MG0AV3)
+
+* Bonus question: Write a SELECT count(*) query FROM the materialized table you created. How many bytes does it estimate will be read? Why?
+
+  The query could be `SELECT COUNT(*) from dezc_3.yellow`.
+
+  It estimates that zero bytes will be read.
+  The number of rows is part of the metadata of the table, so no actual data have to be queried, just the table metadata.
+
+  This is like when you list the files in a folder and look at their sizes: you don't need to read the actual files to know the file sizes.
