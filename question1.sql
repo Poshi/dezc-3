@@ -1,5 +1,7 @@
--- What is count of records for the 2022 Green Taxi Data?
-SELECT COUNT(*)
-FROM `dezc_green_taxi.green`;
+-- What is count of records for the 2024 Yellow Taxi Data?
+SELECT
+  COUNT(*)
+FROM
+  dezc_3.yellow;
 
--- 840402
+-- 20332093

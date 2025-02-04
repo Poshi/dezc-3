@@ -2,3 +2,20 @@
 
 In this module you can find the different SQL queries used in BigQuery to solve
 the questions of the course homework.
+
+Also, there are a couple of questions that are pure theory. Here they are:
+
+* Question 7: Where is the data stored in the External Table you created?
+
+  The data is stored in the *GCP bucket*. In BigQuery there is only a pointer to that data.
+
+* Question 8: It is best practice in Big Query to always cluster your data?
+
+    False.
+    It is not always a best practice.
+    It is a best practice when the data is medium-big (more than 64MB per table/partition),
+    or if your queries always filter on particular columns
+    or on colums that have a high cardinality.
+    In other situations, the speedup and cost reduction will be negligible.
+
+    Reference: [Introduction to clustered tables](https://cloud.google.com/bigquery/docs/clustered-tables?form=MG0AV3)
